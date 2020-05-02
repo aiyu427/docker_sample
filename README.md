@@ -8,6 +8,9 @@ $ docker-compose build
 ```
 
 2. Nuxt.js作成
+
+cloneしてきた直後もやつ
+
 ```
 docker-compose run --rm front npx create-nuxt-app
 
@@ -22,15 +25,19 @@ $ docker-compose up front
 
 3. Railsの準備
 
+作成するときに必要なだけでcloneしてきた場合には不要
+
 ```
 $ docker-compose run --rm api rails new . -f -d postgresql --api
 ```
 
+以下は必要
+
 ```
-$ docker-compose build back
-$ docker-compose run --rm back rails db:create
-$ docker-compose run --rm back rails g scaffold user name:string
-$ docker-compose run --rm back rails db:migrate
+$ docker-compose build api
+$ docker-compose run --rm api rails db:create
+$ docker-compose run --rm api rails g scaffold user name:string
+$ docker-compose run --rm api rails db:migrate
 ```
 
 ```
