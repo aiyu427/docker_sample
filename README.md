@@ -9,7 +9,7 @@ $ docker-compose build
 
 2. Nuxt.js作成
 
-cloneしてきた直後もやつ
+cloneしてきた直後もやるけど、nuxt.configとかが書き変わりそうなので見直す
 
 ```
 docker-compose run --rm front npx create-nuxt-app
