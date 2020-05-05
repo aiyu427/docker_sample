@@ -36,7 +36,6 @@ $ docker-compose run --rm api rails new . -f -d postgresql --api
 ```
 $ docker-compose build api
 $ docker-compose run --rm api rails db:create
-$ docker-compose run --rm api rails g scaffold user name:string
 $ docker-compose run --rm api rails db:migrate
 ```
 
